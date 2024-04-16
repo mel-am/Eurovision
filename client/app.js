@@ -15,7 +15,7 @@ async function getSongs() {
       video.setAttribute("src", song.video)
       console.log(song)
 
-    h2.textContent = song.song_title;
+    h2.textContent =h2.textContent = `${song.country}- ${ song.artist }-  ${song.song_title}`;
     // p.textContent = `This is ${}`;
     // img.src = game.imgUrl;
     // img.alt = game.title;
