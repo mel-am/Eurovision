@@ -14,10 +14,14 @@ app.get("/", function (request, response) {
   response.json("You are looking at my root route. How roude.");
 });
 
-app.get("/games", function (request, response) {
+app.get("/songs", function (request, response) {
   // here we use .all instead of .run because we aren't INSERTing, but selecting. So we want to see ALL the results
-  const games = db.prepare("SELECT * FROM songs").all();
-  response.json(games);
+  try {
+    const songs = db.prepare("SELECT * FROM songs").all();
+  response.json(songs);
+  } catch (error) {
+    response.status(500).json({ error : error })
+}
 });
 
 app.listen(8080, function () {

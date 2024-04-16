@@ -195,12 +195,82 @@ insertSongs.run(
   "Netherlands",
   "Europapa",
   "Joost Klein",
-  
-)
+  "https://www.youtube.com/embed/gT2wY0DjYGo?si=hWInTMmccx3q3ZA6"
+);
 
-// insertSongs.run(
-//   "Australia",
-//   "One Milkali (One Blood)",
-//   "Electric Fields",
-//   "https://www.youtube.com/embed/tJ2IaHxCvdw?si=kiTFvZjrd1XDu5y3"
-// );
+insertSongs.run(
+  "Norway",
+  "Ulveham",
+  "Gate",
+  "https://www.youtube.com/embed/UipzszlJwRQ?si=x_HLelV9cLFmRc7x"
+);
+
+insertSongs.run(
+  "Poland",
+  "The Tower",
+  "Luna",
+  "https://www.youtube.com/embed/IhvDkF9XZx0?si=LL7ClTjhB_QALlWS"
+);
+
+insertSongs.run(
+  "Portugal",
+  "Grito",
+  "Iolanda",
+  "https://www.youtube.com/embed/K5wDGhcDSpQ?si=xRYQLFjsf0DYiSh6"
+);
+
+insertSongs.run(
+  "San Marino",
+  "11:11",
+  "Megara",
+  "https://www.youtube.com/embed/9NcAJtfhpWA?si=9yPsWo5GHyviAB_U"
+);
+
+insertSongs.run(
+  "Serbia",
+  "Ramonda",
+  "Teya Dora",
+  "https://www.youtube.com/embed/lWzPO6nPpwU?si=PcNa9tHnNEIWOpyL"
+);
+
+insertSongs.run(
+  "Slovenia",
+  "Veronika",
+  "Raiven",
+  "https://www.youtube.com/embed/uWcSsi7SliI?si=AWx1-VHkDKvgfBCO"
+);
+
+insertSongs.run(
+  "Spain",
+  "Zorra",
+  "Nebulossa",
+  "https://www.youtube.com/embed/zSZqlQZ0_us?si=6quKkVDKA7VxfYYJ"
+);
+
+insertSongs.run(
+  "Sweden",
+  "Unforgettable",
+  "Marcus & Martinus",
+  "https://www.youtube.com/embed/yekc8t0rJqA?si=U7cTmT2wOt43jgdA"
+);
+
+insertSongs.run(
+  "Switzerland",
+  "The Code",
+  "Nemo",
+  "https://www.youtube.com/embed/kiGDvM14Kwg?si=uuGDusTBVcrafnfO"
+);
+
+insertSongs.run(
+  "Ukraine",
+  "Teresa & Maria",
+  "alyona alyona & Jerry Heil",
+  "https://www.youtube.com/embed/k_8cNbF8FLI?si=Fo4fiUJo-mHD10bL"
+);
+
+insertSongs.run(
+  "United Kingdom",
+  "Dizzy",
+  "Olly Alexander",
+  "https://www.youtube.com/embed/mvs92WfR8lM?si=ozE_ZKb2p0ZgepjW"
+);
