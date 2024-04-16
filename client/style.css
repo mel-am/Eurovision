@@ -114,3 +114,9 @@ nav a:hover {
       width: 23%;
     }
   }
+
+  #songWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;}
