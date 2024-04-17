@@ -274,3 +274,21 @@ insertSongs.run(
   "Olly Alexander",
   "https://www.youtube.com/embed/mvs92WfR8lM?si=ozE_ZKb2p0ZgepjW"
 );
+
+db.exec(`
+    CREATE TABLE IF NOT EXISTS messages (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        message TEXT
+    )
+`);
+
+// Insert initial data into the messages table
+const insertReview = db.prepare('INSERT INTO messages (name, message) VALUES (?, ?)');
+
+insertReview.run("Tim", "This is amazing- I love Eurovision")
+insertReview.run("Emma", "What a great entry from Iceland!")
+insertReview.run("Dorian", "Wow")
+insertReview.run("Bob", "Get in the bin")
+
+console.log('Review added successfully.');

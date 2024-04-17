@@ -27,3 +27,26 @@ app.get("/songs", function (request, response) {
 app.listen(8080, function () {
   console.log("HAHAHAH... 8080");
 });
+// GET
+app.get("/", function (request, response) {
+  console.log("/ is called");
+  response.json("This is the get response");
+});
+
+app.get('/messages', function (request, response) { 
+  const messages = db.prepare('SELECT * FROM messages').all();
+  response.json(messages);
+});
+
+
+// POST
+
+app.post('/messages', (request, response) => {
+  //Take the data from the form (body) 
+const newMessage = request.body;
+console.log(newMessage); // Added console log
+
+  // Data goes into the database 
+  db.prepare ('INSERT INTO messages (name, message) VALUES (?,?)').run(newMessage.name, newMessage.message); // Reflected structure from seed file
+  response.json({ message: 'Message added successfully' });
+});
