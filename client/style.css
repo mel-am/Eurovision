@@ -118,28 +118,34 @@ nav a:hover {
     #song {
       width: 23%;
     }
-  } */
+  }
+#song {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-around;
 
-  /* #songWrapper {
+}
+  #songWrapper {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 50%;}
+
+    #guestbook {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      font-family: monospace;
+      color: #ffffff;
+      border: 10px;
+      background-color: rgb(0, 0, 0);
+  }
+  form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    width: 50%;
-    column-count: 2;
-    column-gap: 40px;
-    } */
-
-    /* #row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-    
-    #column {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 100%;
-      flex: 1;
-    } */
+    gap: 15px;
+  }
