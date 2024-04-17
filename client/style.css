@@ -6,6 +6,11 @@ body {
   background-color: #0e040e;
 }
 
+#songWrapper {
+display: flex;
+flex-direction: row;
+}
+
 h1 {
   font-size: 38px;
 }
@@ -13,7 +18,7 @@ h1 {
 h2 {
   font-size: 18px;
   background-color: #fff9f9;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -99,18 +104,18 @@ nav a:hover {
 
 
   /* media queries */
-  @media (min-width: 600px) {
-    .box-container {
+  /* @media (min-width: 600px) {
+    #songWrapper {
       flex-direction: row;
       flex-wrap: wrap;
     }
   
-    .box {
+    #song {
       width: 40%;
     }
   }
   @media (min-width: 900px) {
-    .box {
+    #song {
       width: 23%;
     }
   }

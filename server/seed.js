@@ -5,15 +5,15 @@ const db = new Database("database.db");
 db.exec(`
     CREATE TABLE IF NOT EXISTS songs (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        artist TEXT NOT NULL,
         country TEXT NOT NULL,
         song_title TEXT NOT NULL,
+        artist TEXT NOT NULL,
         video TEXT NOT NULL
     )
 `);
 
 const insertSongs = db.prepare(`
-    INSERT INTO songs (artist, country, song_title, video) VALUES (?, ?, ?, ?)
+    INSERT INTO songs (country, song_title, artist, video) VALUES (?, ?, ?, ?)
 `);
 
 // insertSong.run(
