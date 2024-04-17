@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="./app.js" type="module" defer></script>
     <title>Eurovision</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="framed-header">
+      <div class="header">
+        <div class="boxone">
+          <h1>Eurovision Song Contest 2024 Entries</h1>
+        </div>
+      </div>
+    </header>
 
-  <header class="framed-header">
-    <div class="header">
-      <div class="boxone"> 
-      <h1>Eurovision Song Contest 2024 Entries</h1></div>
-    </div>
-  </header>
-
-
-  <nav id="nav-bar">
-        <div class="boxtwo">
+    <nav id="nav-bar">
+      <div class="boxtwo">
         <a href="..">Home</a>
         <a href="../Meet-The-Devs/index.html">Meet The Devs</a>
       </div>
-  </nav>
-    
-    
+    </nav>
 
+    <div class="boxthree">
+      <h2>
+        These are all of the songs entered in the Eurovision Song Contest 2024:
+      </h2>
+    </div>
 
-  <div class="boxthree">
-    <h2>These are all of the songs entered in the Eurovision Song Contest 2024:</h2>
-    </div>
-    <div id="songWrapper">
-      <div id="song"></div>
-    </div>
-<div id="guestbook">
-    <h1>Comment Box</h1>
-    <form id="messageForm">
-        <input id="nameInput" name="name" placeholder="Write your name"></input>
-        <textarea id="messageInput" name="message" placeholder="Leave a message"></textarea>
-        <input type="radio" name="opinion" id="agree" value="agree">
-        <label for="html"><img src="./assets/Like.jpg" alt="HTML Image"></label>
-          <input type="radio" name="opinion" id="disagree" value="disagree">
-        <label for="html"><img src="./assets/Dislike.jpg" alt="HTML Image"></label><br>
+    <div id="songWrapper"></div>
+
+    <div id="guestbook">
+      <h1>Comment Box</h1>
+      <form id="messageForm">
+        <input id="nameInput" name="name" placeholder="Write your name" />
+        <textarea
+          id="messageInput"
+          name="message"
+          placeholder="Leave a message"
+        ></textarea>
+        <input type="radio" name="opinion" id="agree" value="agree" />
+        <label for="html"
+          ><img
+            src="https://trello.com/1/cards/661f8737643286faa8234813/attachments/661f8753fcfbf9896626e5f5/previews/661f8754fcfbf9896626e617/download/GettyImages-3136017.jpg"
+            alt="HTML Image like"
+        /></label>
+          <input type="radio" name="opinion" id="disagree" value="disagree" />
+        <label for="html"
+          ><img
+            src="https://trello.com/1/cards/661f8c115facc641dc41fbb6/attachments/661f8c238203063f048ea2d3/previews/661f8c248203063f048ea323/download/GettyImages-3136017.jpg"
+            alt="HTML Image dislike" /></label
+        ><br />
         <button type="submit">Submit</button>
-    </form>
-    <ul id="messagesList"></ul>
-</div>
-
+      </form>
+      <ul id="messagesList"></ul>
+    </div>
 
     <footer>
-        <div class="framed-footer">
+      <div class="framed-footer">
         <h3>Eurovision Song Contest 2024 Entries</h3>
       </div>
-      </footer>
-</body>
-
-
+    </footer>
+  </body>
 </html>
