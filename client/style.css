@@ -1,9 +1,12 @@
 * {
-  font-family: monospace;
+   font-family: monospace;
+  
 }
 
-body {
+body, html {
   background-color: #e629e6;
+  margin: 0;
+  display: block;
 }
 
 h1 {
@@ -28,6 +31,8 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+
 
 #nav-bar {
   background-color: #1b10de;
@@ -91,6 +96,8 @@ h3 {
 
 .framed-footer {
   background-color: #fff9f9;
+  color: black;
+  width: 100%;
   padding: 20px;
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -98,34 +105,125 @@ h3 {
   justify-content: center;
   align-items: center;
   font-size: 7px;
+  margin-bottom: 5px;
 }
 nav a {
   color: rgb(255, 255, 255);
   display: flex;
+  font-weight: bold;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 nav a:hover {
   color: #f821bf;
 }
+#comment-box {
+  width: 100vw;
+  margin: 20px;
+  font-family: monospace;
+  color: #ffffff;
+  border: 10px;
+  /* background-color: rgb(0, 0, 0); */
+  background: linear-gradient(90deg, rgb(255, 0, 255), #f4e047);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+    
+}
 
+#comment-box img{
+  padding-left: 20px;
+  width: 90%;
+  display: block;
+  cursor: pointer;
+}
+
+select,
+input,
+textarea, button {
+  width: 40rem;
+  padding: 5px;
+  display: block;
+  column-gap: 5px;
+}
+#messageForm{
+  display: inline-block;
+}
+#submit {
+  background-color: #1b10de;
+  color: white;
+  cursor: pointer;
+}
+
+#like{
+ /* display: grid;
+  grid-gap: 5px;
+  align-items: center; */
+    width: 50vw;
+    padding: 12px;
+ display: flex; 
+ flex-direction: row-reverse; 
+ justify-content: space-between;
+ align-items: center;
+  
+}
+#dislike{
+  width: 50vw;
+  padding: 12px;
+  display: flex; 
+  flex-direction: row-reverse; 
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+.container {
+  display: flex;
+  align-items: center;
+
+}
+
+.container img {
+  margin-right: 10px; /* Adjust spacing between the image and the button */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+#songWrapper .video:before {
+  
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 /* media queries */
 @media (min-width: 600px) {
   #songWrapper {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   #song {
     width: 40%;
-
   }
-  
 }
 @media (min-width: 900px) {
-  #song, #dev-box {
+  #song,
+  #dev-box {
     width: 23%;
     height: 50%;
   }
@@ -136,8 +234,8 @@ nav a:hover {
   flex-direction: row;
   justify-content: space-around;
 }
-
-#guestbook {
+/* 
+#comment-box {
   max-width: 600px;
   margin: 0 auto;
   padding: 30px;
@@ -146,13 +244,17 @@ nav a:hover {
   border: 10px;
   background-color: rgb(0, 0, 0);
 }
+select, input, textarea {
+  width: 40rem;
+  padding: 10px
+}
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-}
+} */
 
 #songWrapper {
   display: grid;
@@ -167,15 +269,21 @@ form {
   flex-direction: column;
 }
 
-.box {
-  background-color: red;
+
+fieldset {
+  border:none;
+  padding-top: 10px;
+  margin-top: 10px;
+  align-items: ;
 }
 
 .video iframe {
   height: 300px;
 }
 img {
+  align-content: center;
   max-width: 40rem;
+  max-height: min-content;
 }
 
 div.dev-box {
@@ -186,8 +294,48 @@ div.dev-box {
   background-color: #fff9f9;
 }
 #favourite {
-display: flex;
-justify-content: center;
-align-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #1b10de; */
+  margin: 10px;
+}
+
+.wave {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, rgb(255, 0, 255), #f4e047);
+  margin: 5px;
+  border-radius: 10px;
+  animation: wave 4.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#wave_letter {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
 }
