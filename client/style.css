@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #0e040e;
+  background-color: #e629e6;
 }
 
 h1 {
@@ -11,11 +11,14 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
-  background-color: #fff9f9;
-  /* display: flex; */
+  font-size: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1b10de;
+  padding: 20px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 h3 {
@@ -27,17 +30,16 @@ h3 {
 }
 
 #nav-bar {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
-  /* align-content: space-between; */
-  background-color: #fff9f9;
+  background-color: #1b10de;
   padding: 20px;
-  border: 2px solid #403e3e;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   margin-top: 20px;
-  color: #0e040e;
   font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
 }
 
 .boxone {
@@ -54,18 +56,23 @@ h3 {
   font-size: 20px;
   background-color: transparent;
   position: relative;
-  background-color: #fff9f9;
+  background-color: #1b10de;
 }
 
 .boxthree {
   font-size: 20px;
-  background-color: transparent;
+  background-color: #1b10de;
   position: relative;
-  background-color: #fff9f9;
-  border: 2px solid #403e3e;
   border-radius: 10px;
+  border: 2px solid #ffffff;
+  display: flex;
+  justify-content: center;
 }
 
+.boxthree h2 {
+  color: white;
+  border: none;
+}
 .boxone,
 .boxtwo {
   padding: 10px;
@@ -85,16 +92,23 @@ h3 {
 .framed-footer {
   background-color: #fff9f9;
   padding: 20px;
-  border: 2px solid #403e3e;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 7px;
 }
+nav a {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 nav a:hover {
-  color: #ec4cd4;
+  color: #f821bf;
 }
 
 /* media queries */
@@ -111,6 +125,7 @@ nav a:hover {
 @media (min-width: 900px) {
   #song {
     width: 23%;
+    height: 50%;
   }
 }
 #song {
@@ -118,14 +133,6 @@ nav a:hover {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-}
-#songWrapper {
-  /* display: flex;
-    flex-wrap:wrap;
-    flex-direction: row; */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
 
 #guestbook {
@@ -150,12 +157,17 @@ form {
   grid-template-rows: auto;
   grid-gap: 10px;
   align-items: center;
-  padding: 30px 30px;
+  padding: 10px 30px;
 }
 #songWrapper .video {
   display: flex;
   flex-direction: column;
 }
+
 .box {
   background-color: red;
+}
+
+.video iframe {
+  height: 100%;
 }
