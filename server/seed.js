@@ -279,16 +279,25 @@ db.exec(`
     CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
-        message TEXT
+        message TEXT,
+        country TEXT,
+        opinion TEXT
     )
 `);
 
 // Insert initial data into the messages table
-const insertReview = db.prepare('INSERT INTO messages (name, message) VALUES (?, ?)');
+const insertReview = db.prepare('INSERT INTO messages (name, message, country, opinion) VALUES (?, ?, ?, ?)');
 
-insertReview.run("Tim", "This is amazing- I love Eurovision")
-insertReview.run("Emma", "What a great entry from Iceland!")
-insertReview.run("Dorian", "Wow")
-insertReview.run("Bob", "Get in the bin")
+insertReview.run("Tim", "This is amazing- I love Eurovision", "France", "Agree")
+insertReview.run("Emma", "What a great entry from Iceland!","France", "Agree")
+insertReview.run("Dorian", "Wow","France", "Agree")
+insertReview.run("Bob", "Get in the bin", "France", "Agree");
 
 console.log('Review added successfully.');
+
+//1. Add new column to db
+//delete db and re-run 
+//insert opinion and test in the column in the seed
+//- in the server- change the post endpoint to accept new data from the form
+// client - add opinion to the body strinfy to go to the server
+//

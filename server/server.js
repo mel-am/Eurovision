@@ -47,6 +47,8 @@ const newMessage = request.body;
 console.log(newMessage); // Added console log
 
   // Data goes into the database 
-  db.prepare ('INSERT INTO messages (name, message) VALUES (?,?)').run(newMessage.name, newMessage.message); // Reflected structure from seed file
+  db.prepare(
+    "INSERT INTO messages (name, message, country, opinion) VALUES (?,?,?,?)"
+  ).run(newMessage.name, newMessage.message, newMessage.country,  newMessage.opinion); // Reflected structure from seed file
   response.json({ message: 'Message added successfully' });
 });
