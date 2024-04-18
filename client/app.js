@@ -18,9 +18,6 @@ async function getSongs() {
 
     h2.textContent =
       h2.textContent = `${song.country}- ${song.artist}-  ${song.song_title}`;
-    // p.textContent = `This is ${}`;
-    // img.src = game.imgUrl;
-    // img.alt = game.title;
     div.appendChild(h2);
     div.appendChild(p);
     div.appendChild(video);
@@ -44,18 +41,25 @@ async function getMessages() {
     // Create elements for message display
     const li = document.createElement("li");
     const namePara = document.createElement("p");
-    const p = document.createElement("p");
+    const messagePara = document.createElement("p");
+    const countryPara = document.createElement("p");
+    const opinionPara = document.createElement("p");
 
     // Set the text content of the paragraph to the message text
     namePara.textContent = message.name;
-    p.textContent = message.message;
-    console.log(p.textContent);
+    messagePara.textContent = `Message:${message.message}`;
+    countryPara.textContent = `Country:${message.country}`;
+    opinionPara.textContent = `Opinion:${message.opinion}`;
 
     // Append the paragraph to the list item
     li.appendChild(namePara);
-    li.appendChild(p);
+    li.appendChild(messagePara);
+    li.appendChild(countryPara);
+    li.appendChild(opinionPara);
 
     // Append the list item to the messages list
+    messagesList.appendChild(li);
+    messagesList.appendChild(li);
     messagesList.appendChild(li);
     messagesList.appendChild(li);
   });
@@ -71,8 +75,13 @@ document
     const nameInput = document.getElementById("nameInput");
     const yourName = event.target.name.value; // CHANGED - ADDED event.target.yourName
     const messageInput = document.getElementById("messageInput");
-    const message = event.target.message.value; // CHANGED - ADDED event.target.message
-    console.log({ nameInput, messageInput, yourName, message });
+    const message = event.target.message.value;
+    const countryVote = document.getElementById("review");
+    const vote = event.target.review.value;
+    const opinionInput = document.getElementById("opinion"); // CHANGED - ADDED event.target.message
+    const opinion = event.target.opinion.value;
+
+    console.log({ nameInput, messageInput, yourName, message, opinion, vote });
 
     // Send the message to the API - // replace with Render URL at the end before submission
     await fetch("http://localhost:8080/messages", {
@@ -80,9 +89,15 @@ document
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: yourName, message: message }), // add more input into curly braces - DONE?
+      body: JSON.stringify({
+        name: yourName,
+        message: message,
+        country: vote,
+        opinion: opinion,
+      }), // add more input into curly braces - DONE?
     });
 
     // Fetch messages when the page loads
     getMessages();
+    messageForm.reset();
   });
