@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Eurovision fan website" />
     <link rel="stylesheet" href="style.css" />
     <script src="./app.js" type="module" defer></script>
     <title>Eurovision</title>
@@ -16,10 +17,22 @@
         </div>
       </div>
     </header>
-
+    <div class="center">
+      <div class="wave"><p id="wave_letter">E</p></div>
+      <div class="wave"><p id="wave_letter">U</p></div>
+      <div class="wave"><p id="wave_letter">R</p></div>
+      <div class="wave"><p id="wave_letter">O</p></div>
+      <div class="wave"><p id="wave_letter">V</p></div>
+      <div class="wave"><p id="wave_letter">I</p></div>
+      <div class="wave"><p id="wave_letter">S</p></div>
+      <div class="wave"><p id="wave_letter">I</p></div>
+      <div class="wave"><p id="wave_letter">O</p></div>
+      <div class="wave"><p id="wave_letter">N</p></div>
+    </div>
     <nav id="nav-bar">
       <a href="index.html">Home</a>
       <a href="../team.html"> Meet The Devs</a>
+      <a href="#comment-box"> Add a review</a>
     </nav>
 
     <div class="boxthree">
@@ -30,12 +43,13 @@
 
     <div id="songWrapper"></div>
 
-    <div id="guestbook">
-      <h1>Comment Box</h1>
+    <div id="comment-box">
+      <h2>WHAT DO YOU THINK OF THIS ENTRY?</h2>
       <form id="messageForm">
          <div>
-        <label for="country_voting">What do you think of this entry?</label>
-        <select name="review" id="review">
+        <label for="country_voting"></label>
+        <select name="review" id="review" required>
+          <option value="" disabled selected>Select an entry</option>
           <option value="Albania">Albania: Titan</option>
           <option value="Armenia">Armenia: Jako</option>
           <option value="Australia">Australia: One Milkali (One Blood)</option>
@@ -70,34 +84,61 @@
           <option value="Ukraine">Ukraine: Teresa & Maria</option>
           <option value="United Kingdom">United Kingdom: Dizzy</option>
         </select>
+        <div id="input-form">
         <input id="nameInput" name="name" placeholder="Write your name" />
         <textarea
           id="messageInput"
           name="message"
           placeholder="Leave a message"
         ></textarea>
+                  </div>
 
+                  <fieldset>
+  <legend> Your Eurovision Verdict</legend>
+  <div id="like">
+    <input type="radio" name="opinion" id="agree" value="like">
+    <label for="agree">
+      <div class="container">
+        <img src="https://trello.com/1/cards/661f8737643286faa8234813/attachments/661f8753fcfbf9896626e5f5/previews/661f8754fcfbf9896626e617/download/GettyImages-3136017.jpg" alt="Abba with thumbs up"> 
+        <p>Douze Points!</p>
+      </div>
+    </label>
+  </div>
 
-        <label for="html"
-          ><img
-            src="https://trello.com/1/cards/661f8737643286faa8234813/attachments/661f8753fcfbf9896626e5f5/previews/661f8754fcfbf9896626e617/download/GettyImages-3136017.jpg"
-            alt="HTML Image like"
-        /></label>
-          <input type="radio" name="opinion" id="disagree" value="dislike" />
-        <label for="html"
-          ><img
-            src="https://trello.com/1/cards/661f8c115facc641dc41fbb6/attachments/661f8c238203063f048ea2d3/previews/661f8c248203063f048ea323/download/GettyImages-3136017.jpg"
-            alt="HTML Image dislike" /></label>
-        ><br />
-        <button type="submit" alt="HTML Image dislike">Submit</button>
-      </form>
-      <ul id="messagesList"></ul>
-    </div>
+  <div id="dislike">
+    <input type="radio" name="opinion" id="disagree" value="dislike">
+    <label for="disagree">
+      <div class="container">
+        <img src="https://trello.com/1/cards/661f8c115facc641dc41fbb6/attachments/661f8c238203063f048ea2d3/previews/661f8c248203063f048ea323/download/GettyImages-3136017.jpg" alt="Abba turned upside down for dislike"> 
+        <p>Nil Points!</p>
+      </div>
+    </label>
+  </div>
+</fieldset>
+          <!-- <div id="like">
+            <input type="radio" name="opinion" id="agree" value="like">
+            <label for="agree">
+              <div class="container">
+                <img src="https://trello.com/1/cards/661f8737643286faa8234813/attachments/661f8753fcfbf9896626e5f5/previews/661f8754fcfbf9896626e617/download/GettyImages-3136017.jpg" alt="Abba with thumbs up">  <p>Like</p>
+              </div>
+            </label>
+          </div>
 
-    <footer>
+          <div id="dislike">
+            <input type="radio" name="opinion" id="disagree" value="dislike">
+            <label for="disagree">
+              <img src="https://trello.com/1/cards/661f8c115facc641dc41fbb6/attachments/661f8c238203063f048ea2d3/previews/661f8c248203063f048ea323/download/GettyImages-3136017.jpg" alt="Abba turned upside down for dislike"> <p>Dislike</p>
+            </label>
+          </div> -->
+                  <button type="submit" id="submit" alt="submit button">Submit</button>
+                </form>
+                <ul id="messagesList"></ul>
+              </div>
+
+  </body> 
+  <footer>
       <div class="framed-footer">
         <h3>Eurovision Song Contest 2024 Entries</h3>
       </div>
     </footer>
-  </body>
 </html>

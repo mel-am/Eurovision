@@ -15,7 +15,7 @@ async function getSongs() {
     const video = document.createElement("iframe");
     video.setAttribute("src", song.video);
     console.log(song);
-
+// For the video header
     h2.textContent =
       h2.textContent = `${song.country}- ${song.artist}-  ${song.song_title}`;
     div.appendChild(h2);
@@ -36,7 +36,6 @@ async function getMessages() {
   const messages = await response.json();
   console.log(messages);
 
-  // Iterate through the messages and append them to the list
   messages.forEach(function (message) {
     // Create elements for message display
     const li = document.createElement("li");
@@ -94,7 +93,7 @@ document
         message: message,
         country: vote,
         opinion: opinion,
-      }), // add more input into curly braces - DONE?
+      }), 
     });
 
     // Fetch messages when the page loads
