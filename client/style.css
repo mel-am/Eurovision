@@ -117,6 +117,7 @@ nav a {
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 nav a:hover {
@@ -160,6 +161,7 @@ textarea, button {
   background-color: #1b10de;
   color: white;
   cursor: pointer;
+  width: 40%;
 }
 
 #like{
@@ -274,16 +276,17 @@ fieldset {
   border:none;
   padding-top: 10px;
   margin-top: 10px;
-  align-items: ;
+  align-items:center;
 }
 
 .video iframe {
-  height: 300px;
+  aspect-ratio: 16/9;
+  
 }
 img {
-  align-content: center;
+  /* align-content: center; */
   max-width: 40rem;
-  max-height: min-content;
+  /* max-height: min-content; */
 }
 
 div.dev-box {
